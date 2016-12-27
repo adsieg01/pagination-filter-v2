@@ -2,11 +2,7 @@
 
 var $tenthStudent = $(".student-item").hide().slice(0,10).show();
 
-
-
-
-  
-// Dynamically calculate how many li's (students) are in the student-list ul
+ // Dynamically calculate how many li's (students) are in the student-list ul
   var studentCount = $(".student-item").length;
   console.log(studentCount);
 
@@ -26,10 +22,27 @@ var $tenthStudent = $(".student-item").hide().slice(0,10).show();
       $(".pagination ul").append('<li><a href="#">'+i+'</a></li>');
       }
 
-// link the buttons to the relevant pages 
+// Stores names in an array where names can be pulled and shown when button is clicked
+  var allStudents = []; 
+$(function(){
+        $('.student-list .student-item').each(function(){
+            allStudents.push(this);
+        })  
+    })
+
+// link the buttons to the relevant names
+$( ".pagination li" ).click(function() {
+  var showStudent = $(".student-item").hide().slice($(this).index()*10,$(this).index()*10+10).show();
+});
 
 
+
+ 
  // 3 browsers checked for compatibility 
+  //Chrome
+  //Firefox
+  //Safari
+
 
 
 	//Since only 10 students should be shown at a time, your programming needs to calculate the number of pages needed and add the appropriate number of links to the bottom of the page.

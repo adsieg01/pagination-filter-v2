@@ -35,9 +35,6 @@ $( ".pagination li" ).click(function() {
   var showStudent = $(".student-item").hide().slice($(this).index()*10,$(this).index()*10+10).show();
 });
 
-
-
- 
  // 3 browsers checked for compatibility 
   //Chrome
   //Firefox
@@ -45,8 +42,5 @@ $( ".pagination li" ).click(function() {
 
 
 
-	//Since only 10 students should be shown at a time, your programming needs to calculate the number of pages needed and add the appropriate number of links to the bottom of the page.
-//When a user clicks on “2” in the pagination, students 11 through 20 are shown. When a user clicks “3”, students 21 through 30 are shown. And so on. When “6” is clicked 51 through 55 should be shown.
-//Your program should work for any number of students. 
-// Check cross browser compatibility for 3 browsers
+	
 
